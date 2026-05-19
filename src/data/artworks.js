@@ -728,16 +728,16 @@ export const artworks = [
 ];
 
 export const recentlySold = [
-  { title: "Benin Bronze Warrior", price: "₦3.2M", buyer: "Lagos" },
+  { title: "Benin Royal Head", price: "₦3.2M", buyer: "Lagos" },
   { title: "Ndebele Beadwork Panel", price: "₦890K", buyer: "Accra" },
-  { title: "Bamana Chiwara Antelope", price: "₦1.45M", buyer: "London" },
-  { title: "Zulu Love Letter Beads", price: "₦320K", buyer: "New York" },
-  { title: "Fang Reliquary Head", price: "₦2.1M", buyer: "Paris" },
-  { title: "Senufo Poro Helmet", price: "₦760K", buyer: "Nairobi" },
-  { title: "Yoruba Ere Ibeji Twins", price: "₦540K", buyer: "Toronto" },
-  { title: "Kuba Royal Cup", price: "₦680K", buyer: "Amsterdam" },
-  { title: "Timbuktu Leaf Fragment", price: "₦1.1M", buyer: "Dubai" },
-  { title: "Ashanti Gold Weight Set", price: "₦450K", buyer: "Dakar" },
+  { title: "Royal Ceremonial Coral Beads", price: "₦1.45M", buyer: "London" },
+  { title: "Prestige Staff", price: "₦320K", buyer: "Lagos Nigeria" },
+  { title: "Adinkra Adire Wrap", price: "₦2.1M", buyer: "Paris" },
+  { title: "Ceremonial horn", price: "₦760K", buyer: "Nairobi" },
+  { title: "Ere Ibeji Twins", price: "₦540K", buyer: "Nigeria" },
+  { title: "Lidded Vessel (Eyinle)", price: "₦680K", buyer: "Amsterdam" },
+  { title: "Nigeria Royal Beads", price: "₦1.1M", buyer: "Nigeria" },
+  { title: "The Dream Garden", price: "₦450K", buyer: "Toronto" },
 ];
 
 export const formatPrice = (amount) => {
