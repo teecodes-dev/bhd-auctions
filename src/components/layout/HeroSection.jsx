@@ -110,7 +110,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.02, transition: { duration: 0.4 } }}
             >
               <img
-                src={Heropic} alt="image"
+                src={Heropic}
                 alt="Featured artwork"
                 className="w-full h-full object-cover"
               />
