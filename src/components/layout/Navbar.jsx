@@ -270,7 +270,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between px-6 h-16 border-b border-ink/6">
                 <span className="font-display text-xl text-ink">
-                  Ambassador
+                  BHD Auctions
                 </span>
                 <button
                   onClick={() => setMobileOpen(false)}

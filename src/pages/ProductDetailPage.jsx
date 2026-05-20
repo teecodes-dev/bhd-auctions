@@ -292,7 +292,7 @@ export default function ProductDetailPage() {
                       <Award size={16} className="text-gold mt-0.5 shrink-0" />
                       <div>
                         <p className="text-sm font-semibold text-ink">Provenance Record</p>
-                        <p className="text-xs text-ink/40">Verified by Ambassador authentication team</p>
+                        <p className="text-xs text-ink/40">Verified by BHD Auctions authentication team</p>
                       </div>
                     </div>
                     <p className="text-sm text-ink/60 leading-relaxed">{artwork.provenance}</p>

@@ -1,15 +1,17 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
+
 const AuthContext = createContext(null)
 
 // Demo user — in a real app this comes from a backend / JWT
 const DEMO_USER = {
-  id: 'u1',
-  name: 'Demo Collector',
-  email: 'demo@ambassador.art',
-  avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+  id: "u1",
+  name: "Demo Collector",
+  email: "bhd@gmail.com",
+  avatar:
+    "https://media.istockphoto.com/id/517302398/photo/portrait-of-nigerian-man-with-beard-looking-at-camera.jpg?s=1024x1024&w=is&k=20&c=rugR-rmn2oe_ZN1W4oXmY2w8m4dPCVFL2SWDeW7QZsg=",
   balance: 12000000, // ₦12M demo wallet
-}
+};
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)

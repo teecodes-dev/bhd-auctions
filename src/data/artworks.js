@@ -19,7 +19,7 @@ import cb1 from "../assets/art3-4/cb1.png";
 import cb2 from "../assets/art3-4/cb2.png";
 import p1 from "../assets/art3-4/p1.png";
 import p2 from "../assets/art3-4/p2.png";
-import p3 from "../assets/art3-4/p3.png";
+import wcarv13 from "../assets/wcarv13.jpg";
 import bs from "../assets/art3-4/bs.jpeg";
 
 import ab1 from "../assets/art1-2/art1.jpeg";
@@ -246,7 +246,7 @@ export const categories = [
 export const artworks = [
   {
     id: "p1",
-    title: "Oya — Goddess of Storm",
+    title: "Oya Goddess of Storm",
     artist: artists[0],
     category: "Sculptures",
     // ── ARTWORK CARD IMAGE ────────────────────────────────────────────────────
@@ -273,7 +273,7 @@ export const artworks = [
 
   {
     id: "p2",
-    title: "Bamana Chiwara Antelope",
+    title: "Two Bowing Nums",
     artist: artists[0],
     category: "Sculptures",
     image: ab24,
@@ -298,7 +298,7 @@ export const artworks = [
 
   {
     id: "p3",
-    title: "Kente Council Cloth",
+    title: "Oba of Benin",
     artist: artists[1],
     category: "Sculptures",
     image: ab1,
@@ -324,7 +324,7 @@ export const artworks = [
 
   {
     id: "p4",
-    title: "Adinkra Adire Wrap",
+    title: "Moremi's Head",
     artist: artists[1],
     category: "Sculptures",
     image: ab17,
@@ -400,9 +400,9 @@ export const artworks = [
     id: "p7",
     title: "The Elder Speaks",
     artist: artists[2],
-    category: "Paintings",
-    image: p3,
-    images: [p3],
+    category: "Sculptures",
+    image: wcarv13,
+    images: [wcarv13],
     isAuction: false,
     currentBid: null,
     startingBid: null,
@@ -423,7 +423,7 @@ export const artworks = [
   },
   {
     id: "p8",
-    title: "Royal Beaded Crown",
+    title: "Family Jolly Ride",
     artist: artists[2],
     category: "Paintings",
     image: p2,
@@ -497,7 +497,7 @@ export const artworks = [
   },
   {
     id: "p11",
-    title: "Benin Royal Head",
+    title: "Benin Royal Warlord",
     artist: artists[4],
     category: "Sculptures",
     image: oowcarv1,

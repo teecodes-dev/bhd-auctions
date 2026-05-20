@@ -44,7 +44,6 @@ export default function ArtistPage() {
 
   return (
     <motion.div {...pageTransition} className="min-h-screen bg-ivory">
-
       {/* ══════════════════════════════════════════════════
           COVER BANNER — full bleed, tall, nothing overlaps
       ══════════════════════════════════════════════════ */}
@@ -85,10 +84,8 @@ export default function ArtistPage() {
       ══════════════════════════════════════════════════ */}
       <div className="bg-white border-b border-ink/8 shadow-sm">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
-
           {/* Avatar floats UP from the white bar into the cover gap */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 pt-0">
-
             {/* Left: avatar + name block */}
             <div className="flex items-end gap-5 -mt-10 md:-mt-12">
               {/*
@@ -116,8 +113,13 @@ export default function ArtistPage() {
                                flex items-center justify-center shadow-md"
                   >
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                      <path d="M2 5.5L4.5 8L9 3" stroke="white" strokeWidth="1.8"
-                        strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M2 5.5L4.5 8L9 3"
+                        stroke="white"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 )}
@@ -133,7 +135,9 @@ export default function ArtistPage() {
                 </div>
                 <div className="flex items-center gap-1.5 text-ink/50 text-sm mb-2">
                   <MapPin size={13} />
-                  <span>{artist.speciality} · {artist.origin}</span>
+                  <span>
+                    {artist.speciality} · {artist.origin}
+                  </span>
                 </div>
                 <StarRating rating={artist.rating} />
               </div>
@@ -141,13 +145,17 @@ export default function ArtistPage() {
 
             {/* Right: Follow + Contact — bottom-aligned on desktop */}
             <div className="hidden md:flex items-center gap-2.5 pb-6">
-              <button className="inline-flex items-center gap-2 border border-ink/15 text-ink font-medium
+              <button
+                className="inline-flex items-center gap-2 border border-ink/15 text-ink font-medium
                                  px-6 py-2.5 rounded-full text-sm hover:border-cobalt-400 hover:text-cobalt-600
-                                 transition-all">
+                                 transition-all"
+              >
                 Follow
               </button>
-              <button className="inline-flex items-center gap-2 bg-cobalt-600 text-white font-semibold
-                                 px-6 py-2.5 rounded-full text-sm hover:bg-cobalt-700 transition-all shadow-md">
+              <button
+                className="inline-flex items-center gap-2 bg-cobalt-600 text-white font-semibold
+                                 px-6 py-2.5 rounded-full text-sm hover:bg-cobalt-700 transition-all shadow-md"
+              >
                 Contact Artist
               </button>
             </div>
@@ -175,7 +183,6 @@ export default function ArtistPage() {
           MAIN BODY
       ══════════════════════════════════════════════════ */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-10">
-
         {/* ── Stats row ─────────────────────────────────── */}
         <motion.div
           variants={staggerContainer}
@@ -184,22 +191,48 @@ export default function ArtistPage() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
         >
           {[
-            { icon: ShoppingBag, label: 'Total Sales',    value: artist.totalSales,              color: 'bg-cobalt-50 text-cobalt-600' },
-            { icon: TrendingUp,  label: 'Revenue Earned', value: artist.totalRevenue,             color: 'bg-green-50 text-green-600' },
-            { icon: Users,       label: 'Followers',      value: artist.followers.toLocaleString(), color: 'bg-purple-50 text-purple-600' },
-            { icon: Star,        label: 'Avg Rating',     value: `${artist.rating} / 5`,          color: 'bg-amber-50 text-amber-600' },
+            {
+              icon: ShoppingBag,
+              label: "Total Sales",
+              value: artist.totalSales,
+              color: "bg-cobalt-50 text-cobalt-600",
+            },
+            {
+              icon: TrendingUp,
+              label: "Revenue Earned",
+              value: artist.totalRevenue,
+              color: "bg-green-50 text-green-600",
+            },
+            {
+              icon: Users,
+              label: "Followers",
+              value: artist.followers.toLocaleString(),
+              color: "bg-purple-50 text-purple-600",
+            },
+            {
+              icon: Star,
+              label: "Avg Rating",
+              value: `${artist.rating} / 5`,
+              color: "bg-amber-50 text-amber-600",
+            },
           ].map(({ icon: Icon, label, value, color }) => (
             <motion.div
               key={label}
               variants={staggerItem}
               className="bg-white rounded-2xl p-5 border border-ink/5 flex items-start gap-4"
             >
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${color}`}>
+              <div
+                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${color}`}
+              >
                 <Icon size={17} />
               </div>
               <div>
-                <p className="text-[10px] text-ink/40 uppercase tracking-wider mb-1">{label}</p>
-                <p className="font-display text-xl text-ink leading-tight">{value}</p>
+                <p className="text-[10px] text-ink/40 uppercase tracking-wider mb-1">
+                  {label}
+                </p>
+                <p className="font-display text-xl text-ink leading-tight">
+                  {value}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -208,31 +241,53 @@ export default function ArtistPage() {
         {/* ── About + Details ───────────────────────────── */}
         <div className="grid md:grid-cols-3 gap-8 mb-14">
           <div className="md:col-span-2 space-y-4">
-            <h2 className="font-display text-2xl text-ink">About {artist.name.split(' ')[0]}</h2>
+            <h2 className="font-display text-2xl text-ink">
+              About {artist.name.split(" ")[0]}
+            </h2>
             <p className="text-ink/60 text-sm leading-relaxed">{artist.bio}</p>
             <p className="text-ink/40 text-sm leading-relaxed">
-              All works by {artist.name.split(' ')[0]} come with provenance documentation and are covered under
-              Ambassador's Authentication Guarantee. Shipping is handled by our specialist art logistics team.
+              All works by {artist.name.split(" ")[0]} come with provenance
+              documentation and are covered under BHD Auctions Authentication
+              Guarantee. Shipping is handled by our specialist art logistics
+              team.
             </p>
-            <a href="#" className="inline-flex items-center gap-1.5 text-cobalt-600 text-sm font-medium hover:underline">
+            <a
+              href="#"
+              className="inline-flex items-center gap-1.5 text-cobalt-600 text-sm font-medium hover:underline"
+            >
               View full portfolio <ExternalLink size={13} />
             </a>
           </div>
           <div className="bg-white rounded-2xl border border-ink/5 overflow-hidden h-fit">
             <div className="px-5 py-4 border-b border-ink/6">
-              <p className="text-xs font-semibold text-ink/40 uppercase tracking-wider">Artist Details</p>
+              <p className="text-xs font-semibold text-ink/40 uppercase tracking-wider">
+                Artist Details
+              </p>
             </div>
             <div className="divide-y divide-ink/5">
               {[
-                { label: 'Speciality',  value: artist.speciality },
-                { label: 'Based In',    value: artist.origin },
-                { label: 'Active Since', value: '2009' },
-                { label: 'Pieces',      value: `${artistWorks.length} listed` },
-                { label: 'Status',      value: artist.verified ? '✓ Verified Seller' : 'Pending', cobalt: artist.verified },
+                { label: "Speciality", value: artist.speciality },
+                { label: "Based In", value: artist.origin },
+                { label: "Active Since", value: "2009" },
+                { label: "Pieces", value: `${artistWorks.length} listed` },
+                {
+                  label: "Status",
+                  value: artist.verified ? "✓ Verified Seller" : "Pending",
+                  cobalt: artist.verified,
+                },
               ].map(({ label, value, cobalt }) => (
-                <div key={label} className="px-5 py-3.5 flex items-center justify-between">
-                  <p className="text-[10px] text-ink/40 uppercase tracking-wider">{label}</p>
-                  <p className={`text-sm font-semibold ${cobalt ? 'text-cobalt-600' : 'text-ink'}`}>{value}</p>
+                <div
+                  key={label}
+                  className="px-5 py-3.5 flex items-center justify-between"
+                >
+                  <p className="text-[10px] text-ink/40 uppercase tracking-wider">
+                    {label}
+                  </p>
+                  <p
+                    className={`text-sm font-semibold ${cobalt ? "text-cobalt-600" : "text-ink"}`}
+                  >
+                    {value}
+                  </p>
                 </div>
               ))}
             </div>
@@ -245,19 +300,26 @@ export default function ArtistPage() {
             <div className="flex items-center gap-3 mb-6">
               <div>
                 <p className="section-label flex items-center gap-1.5 mb-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" /> Live Auctions
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />{" "}
+                  Live Auctions
                 </p>
                 <h2 className="font-display text-2xl text-ink">
                   Bidding now
-                  <span className="text-ink/30 text-lg ml-2">({liveWorks.length})</span>
+                  <span className="text-ink/30 text-lg ml-2">
+                    ({liveWorks.length})
+                  </span>
                 </h2>
               </div>
             </div>
             <motion.div
-              variants={staggerContainer} initial="initial" animate="animate"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
             >
-              {liveWorks.map(a => <ProductCard key={a.id} artwork={a} />)}
+              {liveWorks.map((a) => (
+                <ProductCard key={a.id} artwork={a} />
+              ))}
             </motion.div>
           </div>
         )}
@@ -269,14 +331,20 @@ export default function ArtistPage() {
               <p className="section-label mb-1">Fixed Price</p>
               <h2 className="font-display text-2xl text-ink">
                 Buy Now
-                <span className="text-ink/30 text-lg ml-2">({fixedWorks.length})</span>
+                <span className="text-ink/30 text-lg ml-2">
+                  ({fixedWorks.length})
+                </span>
               </h2>
             </div>
             <motion.div
-              variants={staggerContainer} initial="initial" animate="animate"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
             >
-              {fixedWorks.map(a => <ProductCard key={a.id} artwork={a} />)}
+              {fixedWorks.map((a) => (
+                <ProductCard key={a.id} artwork={a} />
+              ))}
             </motion.div>
           </div>
         )}
@@ -284,11 +352,15 @@ export default function ArtistPage() {
         {artistWorks.length === 0 && (
           <div className="text-center py-20 bg-white rounded-2xl border border-ink/5">
             <p className="text-5xl mb-4">🎨</p>
-            <h3 className="font-display text-2xl text-ink mb-2">No works listed yet</h3>
-            <p className="text-sm text-ink/40">Check back soon — {artist.name.split(' ')[0]} is adding pieces.</p>
+            <h3 className="font-display text-2xl text-ink mb-2">
+              No works listed yet
+            </h3>
+            <p className="text-sm text-ink/40">
+              Check back soon — {artist.name.split(" ")[0]} is adding pieces.
+            </p>
           </div>
         )}
       </div>
     </motion.div>
-  )
+  );
 }
