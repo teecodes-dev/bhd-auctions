@@ -12,10 +12,10 @@ function AuthLayout({ children, image, quote }) {
         <Link to="/" className="flex items-center gap-2.5 mb-14">
           <div className="w-9 h-9 bg-cobalt-600 rounded-xl flex items-center justify-center shadow-lg shadow-cobalt-600/30">
             <span className="font-display text-white text-sm font-semibold">
-              Aм
+              BHD
             </span>
           </div>
-          <span className="font-display text-xl text-ink">BHD Auctions</span>
+          <span className="font-display text-xl text-ink">Auctions</span>
         </Link>
         {children}
       </div>
