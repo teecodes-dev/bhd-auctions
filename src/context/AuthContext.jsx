@@ -6,7 +6,7 @@ const AuthContext = createContext(null)
 // Demo user — in a real app this comes from a backend / JWT
 const DEMO_USER = {
   id: "u1",
-  name: "Demo Collector",
+  name: "Admin",
   email: "bhd@gmail.com",
   avatar:
     "https://media.istockphoto.com/id/517302398/photo/portrait-of-nigerian-man-with-beard-looking-at-camera.jpg?s=1024x1024&w=is&k=20&c=rugR-rmn2oe_ZN1W4oXmY2w8m4dPCVFL2SWDeW7QZsg=",
