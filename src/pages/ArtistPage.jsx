@@ -7,7 +7,6 @@ import { artists, artworks } from '../data/artworks'
 import ProductCard from '../components/product/ProductCard'
 import { pageTransition, staggerContainer, staggerItem } from '../animations/variants'
 
-// ── Solid blue verified badge ─────────────────────────────────────────────────
 function VerifiedBadge() {
   return (
     <span className="inline-flex items-center gap-1.5 bg-cobalt-600 text-white text-[11px] font-bold px-3 py-1 rounded-full tracking-wide shrink-0">
@@ -44,28 +43,17 @@ export default function ArtistPage() {
 
   return (
     <motion.div {...pageTransition} className="min-h-screen bg-ivory">
-      {/* ══════════════════════════════════════════════════
-          COVER BANNER — full bleed, tall, nothing overlaps
-      ══════════════════════════════════════════════════ */}
+      
       <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
-        {/*
-          ╔══════════════════════════════════════════════════╗
-          ║  TO CHANGE THE BACKGROUND / COVER IMAGE:        ║
-          ║  Open src/data/artworks.js                      ║
-          ║  Find the artist by name                        ║
-          ║  Change the `cover` URL to your own image URL   ║
-          ║  e.g.  cover: '/images/zainab-cover.jpg'        ║
-          ╚══════════════════════════════════════════════════╝
-        */}
+       
         <img
           src={artist.cover}
           alt={`${artist.name} studio`}
           className="w-full h-full object-cover object-center"
         />
-        {/* Subtle darkening — keeps back button readable without killing the image */}
+        
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/20" />
 
-        {/* Back button — top left, inside the cover */}
         <div className="absolute top-0 left-0 right-0 pt-20 px-5 md:px-8 max-w-7xl mx-auto">
           <Link
             to="/"
@@ -78,25 +66,13 @@ export default function ArtistPage() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════════════
-          PROFILE IDENTITY BLOCK — sits BELOW the cover
-          Has the avatar, name, verified, specialty, CTA
-      ══════════════════════════════════════════════════ */}
       <div className="bg-white border-b border-ink/8 shadow-sm">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
-          {/* Avatar floats UP from the white bar into the cover gap */}
+          
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 pt-0">
-            {/* Left: avatar + name block */}
+            
             <div className="flex items-end gap-5 -mt-10 md:-mt-12">
-              {/*
-                ╔══════════════════════════════════════════════════╗
-                ║  TO CHANGE THE ARTIST PROFILE PHOTO:            ║
-                ║  Open src/data/artworks.js                      ║
-                ║  Find the artist by name                        ║
-                ║  Change the `avatar` URL                        ║
-                ║  e.g.  avatar: '/images/zainab-face.jpg'        ║
-                ╚══════════════════════════════════════════════════╝
-              */}
+              
               <div className="relative shrink-0">
                 <img
                   src={artist.avatar}
@@ -104,7 +80,7 @@ export default function ArtistPage() {
                   className="w-24 h-24 md:w-28 md:h-28 rounded-2xl object-cover
                              border-[4px] border-white shadow-[0_4px_24px_rgba(0,0,0,0.18)]"
                 />
-                {/* Blue tick badge on avatar corner */}
+               
                 {artist.verified && (
                   <div
                     title="Verified Artist"
@@ -125,7 +101,6 @@ export default function ArtistPage() {
                 )}
               </div>
 
-              {/* Name, verified pill, specialty — all on white background so they're readable */}
               <div className="pb-5 md:pb-6 pt-3">
                 <div className="flex flex-wrap items-center gap-2.5 mb-1.5">
                   <h1 className="font-display text-2xl md:text-3xl lg:text-4xl text-ink leading-none">
@@ -143,7 +118,6 @@ export default function ArtistPage() {
               </div>
             </div>
 
-            {/* Right: Follow + Contact — bottom-aligned on desktop */}
             <div className="hidden md:flex items-center gap-2.5 pb-6">
               <button
                 className="inline-flex items-center gap-2 border border-ink/15 text-ink font-medium
@@ -161,12 +135,11 @@ export default function ArtistPage() {
             </div>
           </div>
 
-          {/* Quick bio strip + mobile buttons */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 md:pb-6 border-t border-ink/5 pt-4 mt-1">
             <p className="text-sm text-ink/50 max-w-xl leading-relaxed line-clamp-2">
               {artist.bio}
             </p>
-            {/* Mobile CTA */}
+
             <div className="flex md:hidden items-center gap-2 shrink-0">
               <button className="flex-1 border border-ink/15 text-ink font-medium px-4 py-2.5 rounded-full text-sm text-center hover:border-cobalt-400 transition-all">
                 Follow
@@ -179,11 +152,8 @@ export default function ArtistPage() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════════════
-          MAIN BODY
-      ══════════════════════════════════════════════════ */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-10">
-        {/* ── Stats row ─────────────────────────────────── */}
+      
         <motion.div
           variants={staggerContainer}
           initial="initial"
@@ -238,7 +208,6 @@ export default function ArtistPage() {
           ))}
         </motion.div>
 
-        {/* ── About + Details ───────────────────────────── */}
         <div className="grid md:grid-cols-3 gap-8 mb-14">
           <div className="md:col-span-2 space-y-4">
             <h2 className="font-display text-2xl text-ink">
@@ -294,7 +263,6 @@ export default function ArtistPage() {
           </div>
         </div>
 
-        {/* ── Live Auctions ─────────────────────────────── */}
         {liveWorks.length > 0 && (
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
@@ -323,8 +291,7 @@ export default function ArtistPage() {
             </motion.div>
           </div>
         )}
-
-        {/* ── Fixed Price Works ─────────────────────────── */}
+        
         {fixedWorks.length > 0 && (
           <div className="mb-14">
             <div className="mb-6">

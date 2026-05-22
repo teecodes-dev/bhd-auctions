@@ -49,7 +49,6 @@ export default function CheckoutPage() {
     <motion.div {...pageTransition} className="min-h-screen bg-ivory pt-20">
       <div className="max-w-5xl mx-auto px-5 md:px-8 py-10">
 
-        {/* ── Back link ── */}
         {step !== 'success' && (
           <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-sm text-ink/50 hover:text-ink transition-colors mb-8">
             <ArrowLeft size={14} /> Back
@@ -58,13 +57,9 @@ export default function CheckoutPage() {
 
         <AnimatePresence mode="wait">
 
-          {/* ═══════════════════════════════════════
-              STEP 1 — ORDER REVIEW
-          ═══════════════════════════════════════ */}
           {step === 'review' && (
             <motion.div key="review" {...fadeUp} className="grid md:grid-cols-5 gap-8">
 
-              {/* Left — item summary */}
               <div className="md:col-span-3 space-y-6">
                 <div>
                   <p className="section-label mb-2">{type === 'auction' ? 'You Won This Auction' : 'Order Review'}</p>
@@ -142,9 +137,6 @@ export default function CheckoutPage() {
             </motion.div>
           )}
 
-          {/* ═══════════════════════════════════════
-              STEP 2 — PAYMENT
-          ═══════════════════════════════════════ */}
           {step === 'payment' && (
             <motion.div key="payment" {...fadeUp} className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-3 space-y-6">
@@ -273,7 +265,6 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {/* Right — total + pay button */}
               <div className="md:col-span-2">
                 <div className="bg-white rounded-2xl border border-ink/6 p-6 space-y-4 sticky top-24">
                   <div className="flex items-start gap-3 pb-4 border-b border-ink/6">
@@ -321,9 +312,6 @@ export default function CheckoutPage() {
             </motion.div>
           )}
 
-          {/* ═══════════════════════════════════════
-              STEP 3 — SUCCESS
-          ═══════════════════════════════════════ */}
           {step === 'success' && (
             <motion.div key="success" {...fadeUp} className="max-w-lg mx-auto text-center py-12 space-y-6">
               <motion.div

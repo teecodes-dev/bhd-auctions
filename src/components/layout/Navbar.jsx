@@ -19,7 +19,6 @@ const navLinks = [
   { label: "About", href: "/about" },
 ];
 
-// Animated AMB logo mark
 function LogoMark({ transparent }) {
   return (
     <motion.div

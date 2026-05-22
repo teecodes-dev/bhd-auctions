@@ -34,7 +34,7 @@ export default function AuctionsPage() {
 
   return (
     <motion.div {...pageTransition} className="min-h-screen bg-ivory">
-      {/* Header */}
+      
       <div className="bg-ink pt-28 pb-14">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <p className="section-label text-cobalt-400 mb-3 flex items-center gap-2">
@@ -48,7 +48,7 @@ export default function AuctionsPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-10">
-        {/* Filter bar */}
+        
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           {/* Category tabs */}
           <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide">

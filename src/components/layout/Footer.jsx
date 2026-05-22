@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
+          
           {[
             {
               title: "Marketplace",
@@ -55,7 +55,7 @@ export default function Footer() {
             },
             {
               title: "Company",
-              links: ["BHD Auctions", "Blog", "Press", "Careers", "Contact"],
+              links: ["BHD Auctions", "Contact"],
             },
           ].map((col) => (
             <div key={col.title}>

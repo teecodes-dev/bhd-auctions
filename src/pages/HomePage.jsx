@@ -8,7 +8,6 @@ import ProductCard from '../components/product/ProductCard'
 import { artworks, categories, artists } from '../data/artworks'
 import { staggerContainer, staggerItem, fadeUp } from '../animations/variants'
 
-// ── Reusable section heading ──────────────────────────────────────────────────
 function SectionHeader({ label, title, subtitle, cta }) {
   return (
     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
@@ -26,7 +25,6 @@ function SectionHeader({ label, title, subtitle, cta }) {
   )
 }
 
-// ── Wrapper that triggers stagger animation when scrolled into view ────────────
 function AnimatedSection({ children, className = '' }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -43,7 +41,6 @@ function AnimatedSection({ children, className = '' }) {
   )
 }
 
-// ─── 1. Live Auctions ─────────────────────────────────────────────────────────
 function LiveAuctions() {
   const liveItems = artworks.filter(a => a.isAuction).slice(0, 8)
   return (
@@ -63,7 +60,6 @@ function LiveAuctions() {
   )
 }
 
-// ─── 2. Featured Categories ───────────────────────────────────────────────────
 function FeaturedCategories() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -117,7 +113,6 @@ function FeaturedCategories() {
   )
 }
 
-// ─── 3. Feature Spotlight ─────────────────────────────────────────────────────
 function FeatureSpotlight() {
   const featured = artworks.find(a => a.featured && a.isAuction && a.hot)
   const ref = useRef(null)
@@ -188,7 +183,6 @@ function FeatureSpotlight() {
   );
 }
 
-// ─── 4. How It Works ─────────────────────────────────────────────────────────
 function HowItWorks() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -247,7 +241,7 @@ function HowItWorks() {
   );
 }
 
-// ─── 5. Featured Artists — all 8 ─────────────────────────────────────────────
+
 function FeaturedArtists() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -325,7 +319,6 @@ function FeaturedArtists() {
   )
 }
 
-// ─── 6. Browse More Products ──────────────────────────────────────────────────
 function BrowseMore() {
   const fixedItems = artworks.filter(a => !a.isAuction)
   return (
@@ -347,7 +340,7 @@ function BrowseMore() {
   )
 }
 
-// ─── 7. Final CTA ─────────────────────────────────────────────────────────────
+
 function FinalCTA() {
   return (
     <section className="py-24 bg-cobalt-600 overflow-hidden relative">
@@ -383,7 +376,7 @@ function FinalCTA() {
   );
 }
 
-// ─── Home ─────────────────────────────────────────────────────────────────────
+
 export default function HomePage() {
   return (
     <div>

@@ -31,10 +31,10 @@ export function useLiveBidding(initialBid, initialCount, isAuction) {
       amount,
       time: new Date(),
     }
-    setActivityLog(prev => [entry, ...prev].slice(0, 8)) // keep last 8
+    setActivityLog(prev => [entry, ...prev].slice(0, 8)) 
   }
 
-  // Simulate other bidders coming in
+  
   useEffect(() => {
     if (!isAuction || !initialBid) return
 

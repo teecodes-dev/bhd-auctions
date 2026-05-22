@@ -8,7 +8,7 @@ export default function RequireAuth({ children }) {
   if (loading) return null
 
   if (!isLoggedIn) {
-    // Save where they were trying to go, so we can redirect back after login
+    
     return <Navigate to="/login" state={{ from: location }} replace />
   }
 

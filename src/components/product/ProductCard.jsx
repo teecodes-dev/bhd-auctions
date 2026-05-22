@@ -8,7 +8,6 @@ import AuctionTimer from '../auction/AuctionTimer'
 import BidModal from '../auction/BidModal'
 import { staggerItem } from '../../animations/variants'
 
-// ── Verified tick badge ──────────────────────────────────────────────────────
 function VerifiedBadge() {
   return (
     <div
@@ -44,7 +43,7 @@ export default function ProductCard({ artwork }) {
         variants={staggerItem}
         className="group relative bg-white rounded-2xl overflow-hidden border border-ink/6 transition-all duration-300 hover:shadow-[0_8px_40px_rgba(59,110,255,0.10)] hover:-translate-y-1 flex flex-col"
       >
-        {/* ── Image ── */}
+        
         <Link to={`/artwork/${artwork.id}`} className="block relative overflow-hidden shrink-0">
           <div className="aspect-[4/5] bg-ivory-warm relative">
             {!imageLoaded && (
@@ -59,10 +58,8 @@ export default function ProductCard({ artwork }) {
               onLoad={() => setImageLoaded(true)}
             />
 
-            {/* Gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            {/* View detail pill on hover */}
             <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
               <span className="flex items-center gap-1 text-white text-[11px] font-semibold bg-white/25 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30">
                 View <ArrowUpRight size={11} />
@@ -70,7 +67,7 @@ export default function ProductCard({ artwork }) {
             </div>
           </div>
 
-          {/* ── Top badges ── */}
+          
           <div className="absolute top-3 left-3 flex flex-col gap-1.5">
             {artwork.hot && (
               <span className="flex items-center gap-1 bg-white/95 text-orange-500 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
@@ -90,7 +87,7 @@ export default function ProductCard({ artwork }) {
           </div>
         </Link>
 
-        {/* ── Content ── */}
+        
         <div className="p-4 flex flex-col flex-1">
           {/* Artist row */}
           <div className="flex items-center gap-1.5 mb-2">
@@ -106,14 +103,14 @@ export default function ProductCard({ artwork }) {
             <span className="text-[10px] text-ink/30 shrink-0">{artwork.artist.origin}</span>
           </div>
 
-          {/* Title */}
+          
           <Link to={`/artwork/${artwork.id}`} className="block mb-3">
             <h3 className="font-display text-[15px] leading-snug text-ink hover:text-cobalt-600 transition-colors line-clamp-2">
               {artwork.title}
             </h3>
           </Link>
 
-          {/* ── Pricing block ── */}
+          
           <div className="mt-auto">
             {artwork.isAuction ? (
               <motion.div

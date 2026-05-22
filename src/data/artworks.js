@@ -220,38 +220,13 @@ export const categories = [
   },
 ];
 
-// ============================================================
-//  ARTWORKS
-//  Each artwork has:
-//    image  — the card thumbnail
-//    images — array of full-size gallery images (at least 1)
-//
-//  TO CHANGE AN ARTWORK IMAGE:
-//    Find the artwork by its `title`, then replace the URL in
-//    `image` and/or `images` array.
-//
-//  TO ADD YOUR OWN IMAGE:
-//    Put it in /public/images/myart.jpg  →  use '/images/myart.jpg'
-// ============================================================
-
-// import oya from "../assets/artworks/oya.png";
-// import owc from "../assets/artworks/BS/bs.png";
-// import cpb from "../assets/artworks/BS/cpb.png";
-// import hoo from "../assets/artworks/BS/hoo.png";
-// import bl from "../assets/artworks/BS/bl.png";
-// import bl1 from "../assets/artworks/BS/bl1.png";
-// import bl2 from "../assets/artworks/BS/bl2.png";
-// import as from "../assets/artworks/GW/as.png";
-
 export const artworks = [
   {
     id: "p1",
     title: "Oya Goddess of Storm",
     artist: artists[0],
     category: "Sculptures",
-    // ── ARTWORK CARD IMAGE ────────────────────────────────────────────────────
     image: ab5,
-    // ── ARTWORK GALLERY IMAGES (shown on detail page) ─────────────────────────
     images: [ab5],
     isAuction: true,
     currentBid: 2850000,

@@ -8,16 +8,15 @@ import {
 } from "../../animations/variants";
 
 import Heropic from "../../assets/art.png"
-// import newart from "../assets/Hack Pic/newart.png"
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-to-r from-blue-100 to-blue-300">
-      {/* Background */}
+      
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-cobalt-100/50 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-gold/10 rounded-full blur-[100px]" />
-        {/* Grid overlay */}
+        
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -30,7 +29,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 pt-32 pb-20 relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
+          
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -73,12 +72,7 @@ export default function HeroSection() {
               >
                 Explore Auctions <ArrowRight size={16} />
               </Link>
-              {/* <button className="btn-ghost flex items-center gap-2.5 text-base px-5 py-4">
-                <div className="w-9 h-9 bg-ink rounded-full flex items-center justify-center">
-                  <Play size={12} fill="white" className="ml-0.5" />
-                </div>
-                Watch how it works
-              </button> */}
+              
             </motion.div>
 
             {/* Stats */}
@@ -99,7 +93,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right — featured art mosaic */}
+          
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}

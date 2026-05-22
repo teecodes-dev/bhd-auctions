@@ -8,7 +8,7 @@ import { scaleIn, fadeIn } from '../../animations/variants'
 
 export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlaceBid }) {
   const [bidAmount, setBidAmount] = useState('')
-  const [step, setStep]           = useState('input') // input | confirm | success
+  const [step, setStep]           = useState('input') 
   const [error, setError]         = useState('')
   const { isLoggedIn }            = useAuth()
   const navigate                  = useNavigate()
@@ -63,10 +63,10 @@ export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlace
               <div className="p-6">
                 <AnimatePresence mode="wait">
 
-                  {/* ── STEP 1: INPUT ── */}
+                 
                   {step === 'input' && (
                     <motion.div key="input" {...fadeIn} className="space-y-5">
-                      {/* Current bid display */}
+                      
                       <motion.div
                         className="bg-cobalt-50 border border-cobalt-100 rounded-xl p-4 flex items-center justify-between"
                         animate={{ scale: [1, 1.02, 1] }}
@@ -79,7 +79,7 @@ export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlace
                         <TrendingUp size={22} className="text-cobalt-400" />
                       </motion.div>
 
-                      {/* Quick amounts */}
+                      
                       <div>
                         <p className="text-[10px] text-ink/40 uppercase tracking-widest mb-2 font-semibold">Quick Select</p>
                         <div className="grid grid-cols-3 gap-2">
@@ -99,7 +99,7 @@ export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlace
                         </div>
                       </div>
 
-                      {/* Custom input */}
+                      
                       <div>
                         <label className="text-[10px] text-ink/40 uppercase tracking-widest mb-2 block font-semibold">
                           Custom Amount (₦)
@@ -138,7 +138,7 @@ export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlace
                     </motion.div>
                   )}
 
-                  {/* ── STEP 2: CONFIRM ── */}
+                  
                   {step === 'confirm' && (
                     <motion.div key="confirm" {...fadeIn} className="space-y-5">
                       <div className="bg-ivory rounded-xl border border-ink/6 p-5 space-y-3">
@@ -167,7 +167,7 @@ export default function BidModal({ isOpen, onClose, artwork, currentBid, onPlace
                     </motion.div>
                   )}
 
-                  {/* ── STEP 3: SUCCESS ── */}
+                  
                   {step === 'success' && (
                     <motion.div key="success" {...fadeIn} className="py-6 text-center space-y-5">
                       <motion.div

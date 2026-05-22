@@ -1,7 +1,7 @@
 import { recentlySold } from '../../data/artworks'
 
 export default function RecentlySoldTicker() {
-  const items = [...recentlySold, ...recentlySold] // duplicate for seamless loop
+  const items = [...recentlySold, ...recentlySold] 
 
   return (
     <div className="bg-ink text-ivory/80 overflow-hidden py-3 border-y border-ink/5">

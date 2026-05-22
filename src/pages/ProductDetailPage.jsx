@@ -10,7 +10,6 @@ import BidModal from '../components/auction/BidModal'
 import ProductCard from '../components/product/ProductCard'
 import { pageTransition, staggerContainer, staggerItem, fadeUp, fadeIn } from '../animations/variants'
 
-// ── Outbid toast notification ─────────────────────────────────────────────────
 function OutbidToast({ visible, amount, onBidAgain }) {
   return (
     <AnimatePresence>
@@ -37,7 +36,6 @@ function OutbidToast({ visible, amount, onBidAgain }) {
   )
 }
 
-// ── Live activity feed ────────────────────────────────────────────────────────
 function ActivityFeed({ log }) {
   if (!log.length) return null
   return (
@@ -152,7 +150,6 @@ export default function ProductDetailPage() {
             )}
           </div>
 
-          {/* ── Right: Info ── */}
           <div className="space-y-6">
             {/* Artist row */}
             <div className="flex items-center justify-between">
@@ -188,7 +185,6 @@ export default function ProductDetailPage() {
               <p className="text-ink/40 text-sm mt-1">{artwork.origin}</p>
             </div>
 
-            {/* ── Bid / Buy panel ── */}
             <motion.div
               className="bg-white rounded-2xl border border-ink/6 p-5 space-y-4"
               animate={flash ? { boxShadow: ['0 0 0 0 rgba(59,110,255,0)', '0 0 0 8px rgba(59,110,255,0.15)', '0 0 0 0 rgba(59,110,255,0)'] } : {}}
@@ -254,7 +250,6 @@ export default function ProductDetailPage() {
               </div>
             </motion.div>
 
-            {/* ── Tabs ── */}
             <div>
               <div className="flex gap-1 bg-white rounded-xl border border-ink/5 p-1 mb-5">
                 {['details', 'provenance', 'shipping'].map(tab => (
